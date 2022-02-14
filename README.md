@@ -1,4 +1,4 @@
-#Nazmul Ibn Huda's Encryption and Decryption Application
+# Nazmul Ibn Huda's Encryption and Decryption Application
 
 This is a simple Command Line based application to Encrypt and Decrypt 1-Line Message Using C.
 
