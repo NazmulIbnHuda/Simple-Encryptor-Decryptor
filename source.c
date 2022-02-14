@@ -1,3 +1,6 @@
+// Credit : Nazmul Ibn Huda
+// GitHub : https://github.com/NazmulIbnHuda
+
 #include <stdio.h>
 #include <string.h>
 
@@ -40,9 +43,9 @@ void Page(void)
 void Encryptor(void)
 {
     printf("Enter Your Message to Encrypt : ");
-    char str[9999];
-    fgets(str, 10000, stdin);
-    fgets(str, 10000, stdin);
+    char null[5],str[9999];
+    fgets(null, 5, stdin);
+    fgets(str, 9999, stdin);
     printf("Encrypted Message : ");
     for (int i = 0; str[i]; i++)
         printf("%.5d", Engine(str[i]));
