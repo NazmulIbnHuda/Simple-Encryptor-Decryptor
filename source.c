@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <string.h>
 
+//Function Proto-types
 void Page(void);
-void Encoder(void);
-void Decoder(void);
+void Encryptor(void);
+void Decryptor(void);
 int Engine(int i);
 
+//Driver Function
 int main(void)
 {
     printf("Welcome to Nazmul Ibn  Huda's Encryptor & Decryptor Application.\n");
@@ -13,6 +15,7 @@ int main(void)
     return 0;
 }
 
+//Managing Function
 void Page(void)
 {
     int choice;
@@ -22,9 +25,9 @@ void Page(void)
     printf("Enter Your Choice: ");
     scanf("%d", &choice);
     if (choice == 1)
-        Encoder();
+        Encryptor();
     else if (choice == 2)
-        Decoder();
+        Decryptor();
     else if (choice == 0)
         return;
     printf("Enter 0 to Exit and 1 to Go back to Main page.\n");
@@ -33,7 +36,8 @@ void Page(void)
         Page();
 }
 
-void Encoder(void)
+//Encryptor Function
+void Encryptor(void)
 {
     printf("Enter Your Message to Encrypt : ");
     char str[9999];
@@ -45,7 +49,8 @@ void Encoder(void)
     printf("\n");
 }
 
-void Decoder(void)
+//Decryptor Function
+void Decryptor(void)
 {
     printf("Enter Encrypted Message to Decrypt : ");
     char str[50000];
@@ -59,6 +64,7 @@ void Decoder(void)
     printf("\n");
 }
 
+//Main Engine. Used by both Encryptor & Decryptor Function.
 int Engine(int i)
 {
     union
