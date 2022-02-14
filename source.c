@@ -8,7 +8,7 @@ int Engine(int i);
 
 int main(void)
 {
-    printf("Welcome to Nazmul Ibn  Huda's Encoder & Decoder Application.\n");
+    printf("Welcome to Nazmul Ibn  Huda's Encryptor & Decryptor Application.\n");
     Page();
     return 0;
 }
@@ -16,8 +16,8 @@ int main(void)
 void Page(void)
 {
     int choice;
-    printf("1.Encode Message.\n");
-    printf("2.Decode Message.\n");
+    printf("1.Encrypt Message.\n");
+    printf("2.Decrypt Message.\n");
     printf("0.Exit Program.\n");
     printf("Enter Your Choice: ");
     scanf("%d", &choice);
@@ -35,11 +35,11 @@ void Page(void)
 
 void Encoder(void)
 {
-    printf("Enter Your Message to Encode : ");
+    printf("Enter Your Message to Encrypt : ");
     char str[9999];
     fgets(str, 10000, stdin);
     fgets(str, 10000, stdin);
-    printf("Encoded Message : ");
+    printf("Encrypted Message : ");
     for (int i = 0; str[i]; i++)
         printf("%.5d", Engine(str[i]));
     printf("\n");
@@ -47,10 +47,10 @@ void Encoder(void)
 
 void Decoder(void)
 {
-    printf("Enter Encoded Message to Decode : ");
+    printf("Enter Encrypted Message to Decrypt : ");
     char str[50000];
     scanf("%s", str);
-    printf("Decoded Message: ");
+    printf("Decrypted Message: ");
     for (int i = 0; i < strlen(str); i += 5)
     {
         int num = 10000 * (str[i] - 48) + 1000 * (str[i + 1] - 48) + 100 * (str[i + 2] - 48) + 10 * (str[i + 3] - 48) + 1 * (str[i + 4] - 48);
